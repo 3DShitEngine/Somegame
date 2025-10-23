@@ -2,7 +2,7 @@ const url = "https://raw.githubusercontent.com/3DShitEngine/Somegame/refs/heads/
 
 fetch(url)
     .then(response => {
-        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+        if (!response.ok) throw new Error(`errored lmao, status: ${response.status}`);
         return response.text();
     })
     .then(text => {
@@ -10,3 +10,4 @@ fetch(url)
         console.log(text);    // also logs to console just incase
     })
     .catch(err => console.error("Error fetching file:", err));
+
